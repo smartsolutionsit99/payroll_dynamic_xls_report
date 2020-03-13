@@ -12,7 +12,7 @@
         'views/payroll_report.xml',
         'wizard/payroll_report_wiz.xml'
       ],
-    'images': ['static/description/cover.jpg'],
+    'images': ['static/description/cover.png'],
     'auto_install': False,
     'installable': True,
     'application': True,
