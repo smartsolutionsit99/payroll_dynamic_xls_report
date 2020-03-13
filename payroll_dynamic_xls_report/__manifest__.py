@@ -6,7 +6,7 @@
     'summary': 'Dynamic Payroll Report Excel',
     'description': "It shows payroll report in excel for given month,create your own report",
     'author':'Smart Solutions',
-    'depends': ['base','hr', 'hr_payroll','web_widget_color'],
+    'depends': ['base','hr', 'hr_payroll'],
     'data': [
         'security/ir.model.access.csv',
         'views/payroll_report.xml',
@@ -16,7 +16,7 @@
     'auto_install': False,
     'installable': True,
     'application': True,
-    #'licence': 'GPL-3',
+    'licence': 'LGPL-3',
     'price': 25,
     'currency': 'USD',
     'support': 'smartsolutionsit99@gmail.com',

@@ -9,7 +9,6 @@
                 <sheet>
                     <group colspan="2" col="2">
                         <field name="report_title"/>
-                        <field name="color" widget="color" required="1"/>
                         <field name="rule_ids"/>
                     </group>
                 </sheet>

@@ -8,4 +8,3 @@ class payrollReport(models.Model):
 
     rule_ids = fields.Many2many("hr.salary.rule", string="Salary Rules", required=True)
     report_title = fields.Char("Report Title")
-    color = fields.Char("Font Color")
