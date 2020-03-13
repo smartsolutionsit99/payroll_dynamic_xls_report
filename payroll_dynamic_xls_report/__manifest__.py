@@ -16,7 +16,7 @@
     'auto_install': False,
     'installable': True,
     'application': True,
-    'licence': 'AGPL-3',
+    #'licence': 'GPL-3',
     'price': 25,
     'currency': 'USD',
     'support': 'smartsolutionsit99@gmail.com',
