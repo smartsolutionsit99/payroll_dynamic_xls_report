@@ -2,7 +2,7 @@ from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
 
 class payrollReport(models.Model):
-    _name = 'hr.payroll.report'
+    _name = 'payroll.report'
     _descripion = 'Payroll Report'
     _rec_name = 'report_title'
 

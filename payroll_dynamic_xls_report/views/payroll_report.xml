@@ -2,8 +2,8 @@
 <odoo>
 
     <record model="ir.ui.view" id="view_hr_salary_report">
-        <field name="name">hr.payroll.report.form</field>
-        <field name="model">hr.payroll.report</field>
+        <field name="name">payroll.report.form</field>
+        <field name="model">payroll.report</field>
         <field name="arch" type="xml">
             <form string="Payroll Report">
                 <sheet>
@@ -17,8 +17,8 @@
     </record>
 
     <record model="ir.ui.view" id="view_hr_salary_report_tree">
-        <field name="name">hr.payroll.report.tree</field>
-        <field name="model">hr.payroll.report</field>
+        <field name="name">payroll.report.tree</field>
+        <field name="model">payroll.report</field>
         <field name="arch" type="xml">
             <tree string="Payroll Report">
                 <field name="report_title"/>
@@ -30,10 +30,8 @@
 
     <record id="action_hr_payroll_report_config" model="ir.actions.act_window">
         <field name="name">Payroll Report</field>
-        <field name="res_model">hr.payroll.report</field>
-        <field name="view_type">form</field>
+        <field name="res_model">payroll.report</field>
         <field name="view_mode">tree,form</field>
-<!--        <field name="target">new</field>-->
     </record>
 
     <menuitem id="menu_hr_payroll_report" name="Payroll Report Configuration" action="action_hr_payroll_report_config"

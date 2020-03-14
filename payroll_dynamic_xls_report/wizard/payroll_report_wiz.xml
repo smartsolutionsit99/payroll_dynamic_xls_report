@@ -41,11 +41,10 @@
     <record id="action_payroll_reporting_excel" model="ir.actions.act_window">
         <field name="name">Payroll Report</field>
         <field name="res_model">payroll.report.wiz</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
 
-    <menuitem id="menu_payroll_excel_report" name="Payroll Excel Report" action="action_payroll_reporting_excel"
+    <menuitem id="menu_payroll_excel_report" name="Payroll Excel Report" action="action_payroll_reporting_excel" sequence="71"
               parent="hr_payroll.menu_hr_payroll_root"/>
 </odoo>

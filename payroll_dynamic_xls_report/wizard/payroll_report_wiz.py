@@ -4,8 +4,7 @@ import os
 from datetime import datetime
 from datetime import date
 from datetime import *
-from io import BytesIO
-from cStringIO import StringIO
+from io import BytesIO , StringIO
 from odoo.exceptions import except_orm, Warning, RedirectWarning, UserError, ValidationError
 
 import xlsxwriter
@@ -21,7 +20,7 @@ class payrollreportexcelwiz(models.TransientModel):
     
     from_date = fields.Date('From Date', required=True)
     date_end= fields.Date('To Date', required=True)
-    report = fields.Many2one("hr.payroll.report", "Payroll Report", required=True)
+    report = fields.Many2one("payroll.report", "Payroll Report", required=True)
     show_logo  = fields.Boolean(
         string='Show Company Logo',default=True)
     filter = fields.Selection(
@@ -41,7 +40,6 @@ class payrollreportexcelwiz(models.TransientModel):
                               string="Company")
 
     #to get salary rules names
-    @api.multi
     def get_rules(self):
         vals = []
         list = []
@@ -52,7 +50,6 @@ class payrollreportexcelwiz(models.TransientModel):
 
 
 
-    @api.multi
     def get_item_data(self):
         font_color = '#000000'
         file_name = _('Payroll Report.xlsx')
@@ -114,10 +111,10 @@ class payrollreportexcelwiz(models.TransientModel):
                                                                    'y_scale': 0.2,
                                                                    'object_position': 2,
                                                                    })
-            date_2 = datetime.strptime(self.date_end, '%Y-%m-%d').strftime('%Y-%m-%d')
-            date_1 = datetime.strptime(self.from_date, '%Y-%m-%d').strftime('%Y-%m-%d')
-            payroll_month = datetime.strptime(self.from_date, '%Y-%m-%d').strftime('%B')
-            payroll_year = datetime.strptime(self.from_date, '%Y-%m-%d').strftime('%Y')
+            date_2 = datetime.strptime(str(self.date_end), '%Y-%m-%d').strftime('%Y-%m-%d')
+            date_1 = datetime.strptime(str(self.from_date), '%Y-%m-%d').strftime('%Y-%m-%d')
+            payroll_month = datetime.strptime(str(self.from_date), '%Y-%m-%d').strftime('%B')
+            payroll_year = datetime.strptime(str(self.from_date), '%Y-%m-%d').strftime('%Y')
             worksheet.merge_range('C1:G3', 'Payroll For %s %s' % (payroll_month, payroll_year), heading_format)
             row = 3
             column = 0
