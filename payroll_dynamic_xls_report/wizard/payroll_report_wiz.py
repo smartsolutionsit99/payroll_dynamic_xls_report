@@ -54,7 +54,7 @@ class payrollreportexcelwiz(models.TransientModel):
 
     @api.multi
     def get_item_data(self):
-        font_color = self.report.color
+        font_color = '#000000'
         file_name = _('Payroll Report.xlsx')
         fp = BytesIO()
 
