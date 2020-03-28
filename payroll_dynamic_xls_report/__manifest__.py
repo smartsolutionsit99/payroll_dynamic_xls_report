@@ -1,5 +1,5 @@
 {
-    'name': 'Dynamic Payroll Report Excel',
+    'name': 'payroll report excel (engine)',
     'version': '1.0',
     'category': 'payroll',
     'sequence': 60,
