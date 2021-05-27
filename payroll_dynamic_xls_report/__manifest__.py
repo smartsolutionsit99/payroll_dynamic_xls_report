@@ -16,7 +16,7 @@
     'auto_install': False,
     'installable': True,
     'application': True,
-    'price': 15,
+    'price': 100,
     'currency': 'USD',
     'support': 'smartsolutionsit99@gmail.com',
 }
